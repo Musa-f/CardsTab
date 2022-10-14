@@ -1,0 +1,135 @@
+
+@font-face{
+    font-family: 'tommy_fontregular';
+    src: url('tommy_font-webfont.woff2') format('woff2'),
+         url('tommy_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body { height: 100% }
+
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: #F4EDE5;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.onglets{
+    grid-column: 1;
+    grid-template-rows: repeat(4, 1fr);
+    font-family: 'tommy_fontregular';
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.grille{
+    grid-column: 2;
+    margin-left: 5%;
+    position: relative;
+}
+
+/*Design onglets*/
+.onglet1, .onglet2, .onglet3, .onglet4{
+    width: 130px;
+    height: 70px;
+}
+
+.onglet1{
+    color:  #FFB7A1;
+}
+
+.onglet2{
+    color: #919F89;
+}
+
+.onglet3{
+    color: #C8CFD6;
+}
+
+.onglet4{
+    color: #EFBC68;
+}
+
+.onglet{
+    cursor: pointer;
+}
+
+/*Design box*/
+.grille{
+    color: white;
+}
+
+.defaut{
+    position: absolute;
+    background:  #FFB7A1;
+    width: 650px;
+    height: 300px;
+    border-radius: 80px;
+    /*z-index: 1;*/
+}
+
+.grille1{
+    background:  #FFB7A1;
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    border-radius: 80px;
+}
+
+.grille2{
+    background: #919F89;
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    border-radius: 80px;
+}
+
+.grille3{
+    background: #C8CFD6;
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    border-radius: 80px;
+}
+
+.grille4{
+    background: #EFBC68;
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    border-radius: 80px;
+}
+
+.ombre{
+    position: absolute;
+    width: 650px;
+    height: 300px;
+    background: linear-gradient(-40deg, #f492f0 0%, #f9c58d 95%);
+    transform: translate3d(0px, -2px, 0) scale(1.04);
+    filter: blur(35px);
+    opacity: var(0.66);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+    z-index: -4;
+}
+
+
+/*JS*/
+.card{
+    display: none;
+}
+
+.card-active{
+    display: flex;
+}
+
+
+
